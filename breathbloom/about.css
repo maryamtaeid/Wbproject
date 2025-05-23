@@ -1,0 +1,92 @@
+
+.about-body {
+    background: var(--bg-mid, #d6e9f8);
+    padding: 40px 20px 100px;
+    min-height: calc(50vh - 160px); 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .about-card {
+    background: #fff;
+    border-left: 8px solid #1f3e46; 
+    border-radius: 16px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+    padding: 40px 32px;
+    text-align: center;
+  }
+  
+  .about-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: #1f3e46;
+    margin-bottom: 24px;
+  }
+  
+  .about-card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #1f3e46;
+  }
+  
+  .contact-btn {
+    display: inline-block;
+    margin-top: 32px;
+    background: #1f3e46;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.25s;
+  }
+  
+  .contact-btn:hover {
+    background: #d6e9f8;
+  }
+  
+  @media (max-width: 768px) {
+    .about-card {
+      padding: 30px 24px;
+    }
+  
+    .about-card h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-card p {
+      font-size: 1rem;
+    }
+  
+    .contact-btn {
+      padding: 10px 24px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-body {
+      padding: 30px 16px 60px;
+    }
+  
+    .about-card {
+      padding: 24px 18px;
+    }
+  
+    .about-card h2 {
+      font-size: 1.6rem;
+    }
+  
+    .about-card p {
+      font-size: 0.95rem;
+    }
+  
+    .contact-btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  

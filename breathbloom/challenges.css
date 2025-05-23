@@ -1,0 +1,161 @@
+html { scroll-behavior: smooth; }
+
+.page-body {
+  background: var(--bg-mid, #d6e9f8);
+  padding: 60px 20px 100px;
+  min-height: calc(100vh - 160px);
+}
+
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  text-align: center;
+  color: #1f3e46;
+  margin-bottom: 50px;
+}
+
+
+.day-circles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.day-circles a {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #206060;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 160px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+.day-circles a:hover {
+  background: #1b4d4d;
+  transform: scale(1.1);
+}
+
+
+.challenges-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 800px;
+  margin: 80vh auto 0;
+}
+
+.challenge-tile {
+  background: #fff;
+  border-left: 8px solid #8bd9c9;
+  border-radius: 16px;
+  padding: 28px 26px 28px 56px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+  scroll-margin-top: 120px;
+  position: relative;
+}
+
+.challenge-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.challenge-tile h3 {
+  font-size: 1.25rem;
+  color: #1f3e46;
+  margin-bottom: 10px;
+}
+
+.challenge-tile p {
+  font-size: 1rem;
+  color: #3c3c3c;
+  margin: 0;
+}
+
+.task-check {
+  position: absolute;
+  top: 28px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.9rem;
+  }
+
+  .day-circles {
+    gap: 20px;
+  }
+
+  .day-circles a {
+    width: 120px;
+    height: 120px;
+    font-size: 1.5rem;
+    line-height: 120px;
+  }
+
+  .challenge-tile {
+    padding: 24px 24px 24px 64px; 
+  }
+
+  .challenge-tile h3 {
+    font-size: 1.15rem;
+  }
+
+  .challenge-tile p {
+    font-size: 0.95rem;
+  }
+
+  .task-check {
+    top: 24px;
+    left: 24px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-body {
+    padding: 40px 16px 60px;
+  }
+
+  .page-title {
+    font-size: 1.6rem;
+  }
+
+  .day-circles a {
+    width: 90px;
+    height: 90px;
+    font-size: 1.2rem;
+    line-height: 90px;
+  }
+
+  .challenge-tile {
+    padding: 20px 20px 20px 68px; 
+  }
+
+  .challenge-tile h3 {
+    font-size: 1.05rem;
+  }
+
+  .challenge-tile p {
+    font-size: 0.9rem;
+  }
+
+  .task-check {
+    top: 22px;
+    left: 22px;
+    width: 16px;
+    height: 16px;
+  }
+}

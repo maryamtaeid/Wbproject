@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quick Relief | Breath &amp; Bloome</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="quick.css">
+
+  <script>
+    function startTimer(){
+      let s = 300;
+      const display = document.getElementById("timerDisplay");
+      const btn = document.getElementById("startButton");
+      btn.disabled = true;
+      const iv = setInterval(() => {
+        const m = Math.floor(s/60),
+              sec = s % 60;
+        display.textContent = `${m}:${sec < 10 ? "0" : ""}${sec}`;
+        s--;
+        if (s < 0) {
+          clearInterval(iv);
+          display.textContent = "Time’s up!";
+          btn.disabled = false;
+        }
+      }, 1000);
+    }
+  </script>
+</head>
+
+<body>
+<div class="wrapper">
+
+ 
+  <header class="site-header">
+    <h1 class="logo">
+      <a href="index.html">Breath&nbsp;&amp;&nbsp;Bloome</a>
+    </h1>
+
+    <div class="header-row">
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="stress.html">What&nbsp;is&nbsp;Stress?</a>
+        <a href="quick.html" aria-current="page">Quick&nbsp;Relief</a>
+        <a href="challenges.html">Daily&nbsp;Challenges</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+ 
+  <section class="page-body">
+    <h2 class="page-title">Quick Stress-Relief Exercises</h2>
+
+    <article class="info-section">
+      <h3>Deep Breathing — 1 Minute</h3>
+      <video width="320" height="180" controls>
+        <source src="media/quick.mp4" type="video/mp4">
+        Your browser doesn’t support HTML5 video.
+      </video>
+    </article>
+
+    <article class="info-section">
+      <h3>Relaxing Music</h3>
+      <p>Play calm, instrumental music for 5 minutes. Close your eyes and let your shoulders drop.</p>
+      <a href="https://www.youtube.com/@relaxdaily" target="_blank">🎵 Relaxdaily Playlist</a>
+    </article>
+
+    <article class="info-section">
+      <h3>5-Minute Journaling</h3>
+      <p>Write down how you feel right now and one thing you’re grateful for.</p>
+      <button id="startButton" onclick="startTimer()">Start Timer</button>
+      <div id="timerDisplay">5:00</div>
+    </article>
+
+  </section>
+
+ 
+  <footer>
+    <p>&copy; 2025 Breath &amp; Bloome — Maryam</p>
+    <div class="social">
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com"  target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://tiktok.com"    target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

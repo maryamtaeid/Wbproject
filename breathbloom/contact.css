@@ -1,0 +1,106 @@
+.contact-body {
+    background: var(--bg-mid, #d6e9f8);
+    padding: 60px 20px 100px;
+    min-height: calc(100vh - 160px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .contact-card {
+    background: #fff;
+    border-left: 8px solid #1f3e46;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .contact-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    color: #1f3e46;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .contact-card label {
+    font-weight: 600;
+    color: #1f3e46;
+  }
+  
+  .contact-card input,
+  .contact-card textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #b4d9e8;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+  }
+  
+  .contact-card input:focus,
+  .contact-card textarea:focus {
+    border-color: #1f3e46;
+    outline: none;
+  }
+  
+  .contact-card button {
+    align-self: center;
+    margin-top: 10px;
+    background: #b4d9e8;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 36px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s;
+  }
+  
+  .contact-card button:hover {
+    background: #72c9b8;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .contact-card {
+      padding: 30px 20px;
+    }
+  
+    .contact-card h2 {
+      font-size: 1.6rem;
+    }
+  
+    .contact-card button {
+      padding: 10px 30px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-body {
+      padding: 40px 16px;
+    }
+  
+    .contact-card {
+      padding: 25px 18px;
+    }
+  
+    .contact-card h2 {
+      font-size: 1.4rem;
+    }
+  
+    .contact-card input,
+    .contact-card textarea {
+      font-size: 0.95rem;
+      padding: 10px 12px;
+    }
+  }
+  
